@@ -1,0 +1,9 @@
+@import '../coffee-addition.component.css';
+
+.foam-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: .5em;
+}

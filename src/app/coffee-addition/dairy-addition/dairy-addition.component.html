@@ -1,0 +1,11 @@
+<div class="addition-container">
+  <h4 class="label">{{addition.name}}</h4>
+  <select class="addition-select" (change)="saveSelection()">
+    <option *ngFor="let option of addition.options" [ngValue]="option">
+      {{option.name}} 
+      <ng-container *ngIf="showPrice(option)">
+      - {{option.price | currency}}
+      </ng-container>
+    </option>
+  </select>
+</div>

@@ -1,0 +1,46 @@
+/* Add application styles & imports to this file! */
+
+body, span, h1, h2, h3, h4, h5, p {
+  font-family: Lato;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+body, span, p {
+  color: #4a4a4a;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.label {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.nudge {
+  margin: .5em;
+  padding: .5em;
+  border-radius: 25px;
+  background-color: #713e8a;
+  font-size: .75em;
+  color: #fff;
+  text-align: center;
+}

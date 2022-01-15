@@ -1,0 +1,7 @@
+<div class="addition-container">
+  <h4 class="label">{{addition.name}}</h4>
+  <app-syrup-option *ngFor="let option of addition.options" 
+    [option]="option"
+    (updatedOption)="updateOption($event)">
+  </app-syrup-option>
+</div>

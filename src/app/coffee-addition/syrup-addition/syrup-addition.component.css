@@ -1,0 +1,11 @@
+@import '../coffee-addition.component.css';
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  margin: .5em 0;
+}
+
+.quantity-row .icon-button {
+  margin: 0 .5em;
+}

@@ -1,0 +1,35 @@
+<div class="card" *ngIf="coffeeOrder" >
+  <div class="card-column summary-container">
+    <div class="summary">    
+      <i class="fas fa-mug-hot card-drink"></i>
+      <h2>{{coffeeOrder.product.name}}</h2>
+      <span>{{coffeeOrder.total | currency}}</span>
+    </div>
+  </div>
+
+  <div class="card-column addition-sidebar">
+    <ng-container *ngIf="standardAdditions$ | async as additions">
+      <div class="addition-wrapper" *ngFor="let addition of additions">
+        <app-coffee-addition [coffeeOrder]="coffeeOrder" [addition]="addition"></app-coffee-addition>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="syrupAdditions$ | async as syrupAdditions">
+      <div class="addition-wrapper" *ngFor="let syrupAddition of syrupAdditions">
+        <app-syrup-addition [coffeeOrder]="coffeeOrder" [addition]="syrupAddition"></app-syrup-addition>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="dairyAdditions$ | async as dairyAdditions">
+      <div class="addition-wrapper" *ngFor="let dairyAddition of dairyAdditions">
+        <app-coffee-addition [coffeeOrder]="coffeeOrder" [addition]="dairyAddition"></app-coffee-addition>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="foamAdditions$ | async as foamAdditions">
+      <div class="addition-wrapper" *ngFor="let foamAddition of foamAdditions">
+        <app-foam-addition [coffeeOrder]="coffeeOrder" [addition]="foamAddition"></app-foam-addition>
+      </div>
+    </ng-container>
+  </div>
+</div>
